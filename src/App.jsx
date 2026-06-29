@@ -72,7 +72,7 @@ export default function App() {
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("go build && ./hop").then(() => {
+    navigator.clipboard.writeText("scoop bucket add hop https://github.com/elev1e1nSure/hop-bucket\nscoop install hop").then(() => {
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
@@ -191,8 +191,15 @@ export default function App() {
         <section className="max-w-[880px] mx-auto px-6 py-20 border-t border-border-custom" id="install">
           <p className="font-mono text-[13px] text-text-dim mb-4">install</p>
           <div className="bg-bg-raised border border-border-custom rounded-[10px] p-[18px_20px] flex items-center justify-between gap-4 flex-wrap">
-            <div className="font-mono text-[14.5px] text-text-main">
-              <span className="text-text-dim mr-2.5">$</span>go build && ./hop
+            <div className="font-mono text-[14.5px] text-text-main leading-relaxed">
+              <div className="flex items-start">
+                <span className="text-text-dim mr-2.5 select-none">$</span>
+                <span>scoop bucket add hop https://github.com/elev1e1nSure/hop-bucket</span>
+              </div>
+              <div className="flex items-start mt-1.5">
+                <span className="text-text-dim mr-2.5 select-none">$</span>
+                <span>scoop install hop</span>
+              </div>
             </div>
             <button
               onClick={handleCopy}
@@ -212,7 +219,7 @@ export default function App() {
             </button>
           </div>
           <p className="text-sm text-text-dim mt-4 mx-1">
-            Пока без <code>go install</code> — склонируй репо и собери локально.
+            Установка для Windows через Scoop.
           </p>
         </section>
 
