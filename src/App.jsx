@@ -188,6 +188,34 @@ export default function App() {
           </div>
         </section>
 
+        <section className="max-w-[880px] mx-auto px-6 py-20 border-t border-border-custom" id="install">
+          <p className="font-mono text-[13px] text-text-dim mb-4">install</p>
+          <div className="bg-bg-raised border border-border-custom rounded-[10px] p-[18px_20px] flex items-center justify-between gap-4 flex-wrap">
+            <div className="font-mono text-[14.5px] text-text-main">
+              <span className="text-text-dim mr-2.5">$</span>go build && ./hop
+            </div>
+            <button
+              onClick={handleCopy}
+              title={copied ? "скопировано" : "скопировать"}
+              className={`bg-transparent border border-border-custom rounded-[6px] p-[7px] cursor-pointer transition-all duration-150 ease-in-out hover:border-accent hover:text-accent flex items-center justify-center ${copied ? "text-accent border-accent scale-90" : "text-text-dim"}`}
+            >
+              {copied ? (
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 7.5L6 11.5L13 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              ) : (
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="5" y="1" width="9" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.2"/>
+                  <path d="M10 10V12.5C10 13.0523 9.55228 13.5 9 13.5H2.5C1.94772 13.5 1.5 13.0523 1.5 12.5V6C1.5 5.44772 1.94772 5 2.5 5H5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+                </svg>
+              )}
+            </button>
+          </div>
+          <p className="text-sm text-text-dim mt-4 mx-1">
+            Пока без <code>go install</code> — склонируй репо и собери локально.
+          </p>
+        </section>
+
         <section className="max-w-[880px] mx-auto px-6 py-20 border-t border-border-custom">
           <div className="grid grid-cols-3 max-[720px]:grid-cols-1 gap-[1px] bg-border-custom border border-border-custom rounded-xl overflow-hidden">
             <div className="bg-bg py-[28px] px-6">
@@ -280,34 +308,6 @@ Host db-primary
               </div>
             </div>
           </div>
-        </section>
-
-        <section className="max-w-[880px] mx-auto px-6 pb-20" id="install">
-          <p className="font-mono text-[13px] text-text-dim mb-4">install</p>
-          <div className="bg-bg-raised border border-border-custom rounded-[10px] p-[18px_20px] flex items-center justify-between gap-4 flex-wrap">
-            <div className="font-mono text-[14.5px] text-text-main">
-              <span className="text-text-dim mr-2.5">$</span>go build && ./hop
-            </div>
-            <button
-              onClick={handleCopy}
-              title={copied ? "скопировано" : "скопировать"}
-              className={`bg-transparent border border-border-custom rounded-[6px] p-[7px] cursor-pointer transition-all duration-150 ease-in-out hover:border-accent hover:text-accent flex items-center justify-center ${copied ? "text-accent border-accent scale-90" : "text-text-dim"}`}
-            >
-              {copied ? (
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 7.5L6 11.5L13 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              ) : (
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="5" y="1" width="9" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.2"/>
-                  <path d="M10 10V12.5C10 13.0523 9.55228 13.5 9 13.5H2.5C1.94772 13.5 1.5 13.0523 1.5 12.5V6C1.5 5.44772 1.94772 5 2.5 5H5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-                </svg>
-              )}
-            </button>
-          </div>
-          <p className="text-sm text-text-dim mt-4 mx-1">
-            Пока без <code>go install</code> — склонируй репо и собери локально.
-          </p>
         </section>
 
       </main>
