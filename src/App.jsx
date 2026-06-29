@@ -251,9 +251,7 @@ export default function App() {
             <div className="bg-bg py-[28px] px-6">
               <p className="font-mono text-[13px] text-accent mb-3.5">--full-crud</p>
               <p className="m-0 text-text-dim text-[15px]">
-                Добавляй, изменяй и удаляй сервера прямо в терминале —{' '}
-                <strong className="text-text-main font-medium">Ctrl+N/E/D</strong>.
-                На <strong className="text-text-main font-medium">Tab</strong> — панель с деталями выбранного сервера.
+                Создавай, редактируй и удаляй хосты прямо в интерфейсе. Изменения сразу сохраняются в твой SSH-конфиг.
               </p>
             </div>
           </div>
