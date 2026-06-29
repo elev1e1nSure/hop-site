@@ -219,12 +219,14 @@ export default function App() {
             </button>
           </div>
           <p className="text-sm text-text-dim mt-4 mx-1">
-            Установка для Windows через Scoop.
+            Установка через Scoop. Или скачай zip с{' '}
+            <a href="https://github.com/elev1e1nSure/hop/releases" className="underline hover:text-accent" target="_blank" rel="noopener noreferrer">релизов</a>
+            , распакуй и запусти <code className="font-mono text-[13px] bg-bg-raised-2 px-1 rounded">hop --path add</code>.
           </p>
         </section>
 
         <section className="max-w-[880px] mx-auto px-6 py-20 border-t border-border-custom">
-          <div className="grid grid-cols-3 max-[720px]:grid-cols-1 gap-[1px] bg-border-custom border border-border-custom rounded-xl overflow-hidden">
+          <div className="grid grid-cols-2 max-[720px]:grid-cols-1 gap-[1px] bg-border-custom border border-border-custom rounded-xl overflow-hidden">
             <div className="bg-bg py-[28px] px-6">
               <p className="font-mono text-[13px] text-accent mb-3.5">--no-cloud</p>
               <p className="m-0 text-text-dim text-[15px]">
@@ -244,6 +246,14 @@ export default function App() {
               <p className="m-0 text-text-dim text-[15px]">
                 hop не реализует ssh — он его вызывает. Поэтому всё, что работало
                 раньше, работает и сейчас.
+              </p>
+            </div>
+            <div className="bg-bg py-[28px] px-6">
+              <p className="font-mono text-[13px] text-accent mb-3.5">--full-crud</p>
+              <p className="m-0 text-text-dim text-[15px]">
+                Добавляй, изменяй и удаляй сервера прямо в терминале —{' '}
+                <strong className="text-text-main font-medium">Ctrl+N/E/D</strong>.
+                На <strong className="text-text-main font-medium">Tab</strong> — панель с деталями выбранного сервера.
               </p>
             </div>
           </div>
@@ -322,8 +332,8 @@ Host db-primary
       <footer className="border-t border-border-custom py-7 pb-10">
         <div className="max-w-[880px] mx-auto px-6 flex items-center justify-between font-mono text-[12.5px] text-text-dim">
           <span>MIT license</span>
-          <a href="#" className="no-underline hover:text-accent">
-            github.com/you/hop
+          <a href="https://github.com/elev1e1nSure/hop" className="no-underline hover:text-accent" target="_blank" rel="noopener noreferrer">
+            github.com/elev1e1nSure/hop
           </a>
         </div>
       </footer>
