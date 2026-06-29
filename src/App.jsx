@@ -44,9 +44,6 @@ function ScreenshotSlot() {
           </div>
         </div>
       )}
-      <figcaption className="px-5 py-3 border-t border-border-custom text-[13px] text-text-dim">
-        No fake terminal here. This spot is for the actual app screenshot.
-      </figcaption>
     </figure>
   );
 }
@@ -82,24 +79,66 @@ export default function App() {
           <div className="flex flex-wrap gap-3 font-mono text-[13px] text-text-dim">
             <a
               href="#install"
-              className="border border-accent text-accent rounded-[6px] px-4 py-2 no-underline transition hover:bg-accent-soft active:translate-y-px"
+              className="inline-flex items-center gap-1.5 border border-accent text-accent rounded-[6px] px-4 py-2 no-underline transition hover:bg-accent-soft active:translate-y-px"
             >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="opacity-90"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" x2="12" y1="15" y2="3" />
+              </svg>
               install
             </a>
             <a
               href={RELEASES_URL}
-              className="border border-border-custom rounded-[6px] px-4 py-2 no-underline transition hover:border-accent hover:text-accent active:translate-y-px"
+              className="inline-flex items-center gap-1.5 border border-border-custom rounded-[6px] px-4 py-2 no-underline transition hover:border-accent hover:text-accent active:translate-y-px"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="opacity-90"
+              >
+                <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2z" />
+                <line x1="7" x2="7.01" y1="7" y2="7" />
+              </svg>
               releases
             </a>
             <a
               href={REPO_URL}
-              className="border border-border-custom rounded-[6px] px-4 py-2 no-underline transition hover:border-accent hover:text-accent active:translate-y-px"
+              className="inline-flex items-center gap-1.5 border border-border-custom rounded-[6px] px-4 py-2 no-underline transition hover:border-accent hover:text-accent active:translate-y-px"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="opacity-90"
+              >
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
               source
             </a>
           </div>
