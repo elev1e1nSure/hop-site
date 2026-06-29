@@ -1,4 +1,10 @@
-import React, { useState, useRef } from "react";
+import { useRef, useState } from "react";
+
+const REPO_URL = "https://github.com/elev1e1nSure/hop";
+const RELEASES_URL = `${REPO_URL}/releases`;
+const BUCKET_URL = "https://github.com/elev1e1nSure/hop-bucket";
+const INSTALL_COMMAND = `scoop bucket add hop ${BUCKET_URL}
+scoop install hop`;
 
 const servers = [
   { name: "prod-api-01", user: "deploy", host: "10.0.4.12", online: true },
@@ -72,7 +78,7 @@ export default function App() {
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("scoop bucket add hop https://github.com/elev1e1nSure/hop-bucket\nscoop install hop").then(() => {
+    navigator.clipboard.writeText(INSTALL_COMMAND).then(() => {
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
@@ -102,7 +108,7 @@ export default function App() {
             hop<span className="inline-block text-accent animate-cursor-blink">_</span>
           </h1>
           <p className="text-[19px] text-text-dim max-w-[560px] mb-12">
-            Читает <strong className="text-text-main font-medium">~/.ssh/config</strong>, показывает список хостов, подключает куда скажешь. Больше ничего не делает.
+            Читает <strong className="text-text-main font-medium">~/.ssh/config</strong>, показывает список хостов, фильтрует их на лету и запускает обычный SSH.
           </p>
 
           <div className="bg-bg-raised border border-border-custom rounded-[10px] overflow-hidden shadow-[0_24px_60px_-24px_rgba(0,0,0,0.5)]">
@@ -194,7 +200,7 @@ export default function App() {
             <div className="font-mono text-[14.5px] text-text-main leading-relaxed">
               <div className="flex items-start">
                 <span className="text-text-dim mr-2.5 select-none">$</span>
-                <span>scoop bucket add hop https://github.com/elev1e1nSure/hop-bucket</span>
+                <span>scoop bucket add hop {BUCKET_URL}</span>
               </div>
               <div className="flex items-start mt-1.5">
                 <span className="text-text-dim mr-2.5 select-none">$</span>
@@ -220,7 +226,7 @@ export default function App() {
           </div>
           <p className="text-sm text-text-dim mt-4 mx-1">
             Установка через Scoop. Или скачай zip с{' '}
-            <a href="https://github.com/elev1e1nSure/hop/releases" className="underline hover:text-accent" target="_blank" rel="noopener noreferrer">релизов</a>
+            <a href={RELEASES_URL} className="underline hover:text-accent" target="_blank" rel="noopener noreferrer">релизов</a>
             , распакуй и запусти <code className="font-mono text-[13px] bg-bg-raised-2 px-1 rounded">hop --path add</code>.
           </p>
         </section>
@@ -330,7 +336,7 @@ Host db-primary
       <footer className="border-t border-border-custom py-7 pb-10">
         <div className="max-w-[880px] mx-auto px-6 flex items-center justify-between font-mono text-[12.5px] text-text-dim">
           <span>MIT license</span>
-          <a href="https://github.com/elev1e1nSure/hop" className="no-underline hover:text-accent" target="_blank" rel="noopener noreferrer">
+          <a href={REPO_URL} className="no-underline hover:text-accent" target="_blank" rel="noopener noreferrer">
             github.com/elev1e1nSure/hop
           </a>
         </div>

@@ -1,34 +1,35 @@
 # hop-site
 
-Landing page for the **hop** SSH manager.
+Landing page for [hop](https://github.com/elev1e1nSure/hop), a TUI SSH host manager.
 
-## Tech Stack
-- **Framework:** React (v19)
-- **Styling:** Tailwind CSS (v4) with `@tailwindcss/vite`
-- **Bundler:** Vite (v8)
-- **Package Manager:** pnpm
+- Site: https://elev1e1nsure.github.io/hop-site/
+- Main repository: https://github.com/elev1e1nSure/hop
+- Releases: https://github.com/elev1e1nSure/hop/releases
+- Scoop bucket: https://github.com/elev1e1nSure/hop-bucket
 
-## Quick Start
+## Stack
 
-### Install Dependencies
+- React 19
+- Tailwind CSS 4
+- Vite 8
+- pnpm
+
+## Development
+
 ```bash
 pnpm install
-```
-
-### Run Development Server
-Launches the server locally on the IPv4 loopback address (`http://127.0.0.1:5173/`).
-```bash
 pnpm run dev
 ```
 
-### Build for Production
-Compiles optimized static assets into the `dist` directory.
+The dev server runs at `http://127.0.0.1:5173/`.
+
+## Checks
+
 ```bash
+pnpm run lint
 pnpm run build
 ```
 
-### Preview Production Build
-Starts a local server to preview the built application.
-```bash
-pnpm run preview
-```
+## Deploy
+
+GitHub Pages deploys from `main` through `.github/workflows/deploy.yml`.
